@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AMApplicationBuild</key>
+	<string>444.7</string>
+	<key>AMApplicationVersion</key>
+	<string>2.8</string>
+	<key>AMDocumentVersion</key>
+	<string>2</string>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>自动操作</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>source</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Run AppleScript.action</string>
+				<key>ActionName</key>
+				<string>运行 AppleScript</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>source</key>
+					<string>on run {input, parameters}	(* 自动登录钉钉 *)	-- 激活钉钉	tell application "DingTalk" to activate	dingdingRun()		return inputend run-- 处理钉钉登录逻辑on dingdingRun()	tell application "System Events"		tell application process "DingTalk"			set current_window to window 1			try				set pwd_button to button 2 of current_window				set pwd_button_title to title of pwd_button				if pwd_button_title is "忘记密码" then					-- 登陆账号/密码赋值					set value of text field 1 of current_window to "16619930394"					set value of text field 2 of current_window to "zw&amp;lm1314"					delay 1					-- 按下回车键					keystroke return				end if			on error				"报错了"			end try			(*if login_checkbox contains "自动登录" then					end if*)		end tell	end tellend dingdingRun</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.RunScript</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>RunScriptAction</string>
+				<key>InputUUID</key>
+				<string>1EAA4A72-9953-4107-A431-80FB0C0ABA1A</string>
+				<key>Keywords</key>
+				<array>
+					<string>运行</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>D98D67B8-F68E-43B8-A90C-1AF4CF3991F0</string>
+				<key>UUID</key>
+				<string>D72A41DD-9E52-4FC5-B4B3-EC4DCD69C551</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string>on run {input, parameters}
+	
+	(* Your script goes here *)
+	
+	return input
+end run</string>
+						<key>name</key>
+						<string>source</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>393.000000:303.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>自动操作</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>source</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Run AppleScript.action</string>
+				<key>ActionName</key>
+				<string>运行 AppleScript</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>source</key>
+					<string>on run {input, parameters}	delay 3	(* 自动登录QQ *)	--激活QQ	tell application "QQ" to activate	-- 处理QQ事件	tell application "System Events"		tell application process "QQ"			-- 填充第一个QQ页面的信息			set current_window to window 1			-- 登陆账号/密码赋值			set value of text field 1 of current_window to "1984774346"			set value of text field 2 of current_window to "zw13271243127"			delay 1			click checkbox 3 of current_window		end tell	end tell		return inputend run</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.RunScript</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>RunScriptAction</string>
+				<key>InputUUID</key>
+				<string>1D8AF8F1-E639-4FE6-8DB6-9B4E52D71027</string>
+				<key>Keywords</key>
+				<array>
+					<string>运行</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>51EACCE7-612B-4AED-A355-D70F8422C228</string>
+				<key>UUID</key>
+				<string>86989F72-0B47-4E16-8B28-15F0FBA1703B</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string>on run {input, parameters}
+	
+	(* Your script goes here *)
+	
+	return input
+end run</string>
+						<key>name</key>
+						<string>source</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>393.000000:837.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+	</array>
+	<key>connectors</key>
+	<dict>
+		<key>69DF879A-F4C0-4BE7-A7BE-C247E432AE83</key>
+		<dict>
+			<key>from</key>
+			<string>D72A41DD-9E52-4FC5-B4B3-EC4DCD69C551 - D72A41DD-9E52-4FC5-B4B3-EC4DCD69C551</string>
+			<key>to</key>
+			<string>86989F72-0B47-4E16-8B28-15F0FBA1703B - 86989F72-0B47-4E16-8B28-15F0FBA1703B</string>
+		</dict>
+	</dict>
+	<key>workflowMetaData</key>
+	<dict>
+		<key>workflowTypeIdentifier</key>
+		<string>com.apple.Automator.workflow</string>
+	</dict>
+</dict>
+</plist>
