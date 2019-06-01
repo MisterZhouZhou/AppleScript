@@ -51,14 +51,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run {input, parameters}	(* 自动登录钉钉 *)	-- 激活钉钉	tell application "DingTalk" to activate	dingdingRun()		return inputend run-- 处理钉钉登录逻辑on dingdingRun()	tell application "System Events"		tell application process "DingTalk"			set current_window to window 1			try				set pwd_button to button 2 of current_window				set pwd_button_title to title of pwd_button				if pwd_button_title is "忘记密码" then					-- 登陆账号/密码赋值					set value of text field 1 of current_window to "16619930394"					set value of text field 2 of current_window to "zw&amp;lm1314"					delay 1					-- 按下回车键					keystroke return				end if			on error				"报错了"			end try			(*if login_checkbox contains "自动登录" then					end if*)		end tell	end tellend dingdingRun</string>
-				</dict>
-				<key>ActionRuntimeParameters</key>
-				<dict>
-					<key>source</key>
-					<string>on run {input, parameters}	(* 自动登录钉钉 *)	-- 激活钉钉	tell application "DingTalk" to activate	dingdingRun()		return inputend run-- 处理钉钉登录逻辑on dingdingRun()	tell application "System Events"		tell application process "DingTalk"			set current_window to window 1			try				set pwd_button to button 2 of current_window				set pwd_button_title to title of pwd_button				if pwd_button_title is "忘记密码" then					-- 登陆账号/密码赋值					set value of text field 1 of current_window to "16619930394"					set value of text field 2 of current_window to "zw&amp;lm1314"					delay 1					-- 按下回车键					keystroke return				end if			on error				"报错了"			end try			(*if login_checkbox contains "自动登录" then					end if*)		end tell	end tellend dingdingRun</string>
-					<key>temporary items path</key>
-					<string>/var/folders/k_/5f490kk94g3811lz8jgdgkjc0000gp/T/DCEEADE2-E080-4E17-8BD9-2C3FEE16A430/1/com.apple.Automator.RunScript</string>
+					<string>on run {input, parameters}	(* 自动登录钉钉 *)	-- 激活钉钉	tell application "DingTalk" to activate	dingdingRun()		return inputend run-- 处理钉钉登录逻辑on dingdingRun()	tell application "System Events"		tell application process "DingTalk"			set current_window to window 1			try				set pwd_button to button 2 of current_window				set pwd_button_title to title of pwd_button				if pwd_button_title is "忘记密码" then					-- 登陆账号/密码赋值					set value of text field 1 of current_window to "xx"					set value of text field 2 of current_window to "xx"					delay 1					-- 按下回车键					keystroke return				end if			on error				"报错了"			end try			(*if login_checkbox contains "自动登录" then					end if*)		end tell	end tellend dingdingRun</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -160,7 +153,7 @@ end run</string>
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run {input, parameters}	(* 自动登录QQ *)	--激活QQ	tell application "QQ" to activate	-- 处理QQ事件	tell application "System Events"		tell application process "QQ"			-- 填充第一个QQ页面的信息			set current_window to window 1			-- 登陆账号/密码赋值			set value of text field 1 of current_window to "2861451012"			set value of text field 2 of current_window to "zw&amp;lm1314"			delay 1			click checkbox 3 of current_window		end tell	end tell	return inputend run</string>
+					<string>on run {input, parameters}	(* 自动登录QQ *)	--激活QQ	tell application "QQ" to activate	-- 处理QQ事件	tell application "System Events"		tell application process "QQ"			-- 填充第一个QQ页面的信息			set current_window to window 1			-- 登陆账号/密码赋值			set value of text field 1 of current_window to "xx"			set value of text field 2 of current_window to "xx"			delay 1			click checkbox 3 of current_window		end tell	end tell	return inputend run</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -415,8 +408,6 @@ end run</string>
 						<string>0</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
@@ -557,8 +548,6 @@ end run</string>
 						<string>2</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
@@ -572,28 +561,28 @@ end run</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>2373B16E-7F9F-4D4A-9C92-C32A374CD948</key>
+		<key>060E4978-9561-45C1-8D62-17DFD8F731A2</key>
 		<dict>
 			<key>from</key>
 			<string>D81C0E2A-E2F9-4FC8-8883-0F9619BAA13E - D81C0E2A-E2F9-4FC8-8883-0F9619BAA13E</string>
 			<key>to</key>
 			<string>39F049BF-C69F-4FE7-8993-78FB713995E2 - 39F049BF-C69F-4FE7-8993-78FB713995E2</string>
 		</dict>
-		<key>6B244326-8111-4368-9A9E-2B77E139B40D</key>
-		<dict>
-			<key>from</key>
-			<string>86989F72-0B47-4E16-8B28-15F0FBA1703B - 86989F72-0B47-4E16-8B28-15F0FBA1703B</string>
-			<key>to</key>
-			<string>2917E497-DA2E-4A57-B3F6-CA4DF06E21A4 - 2917E497-DA2E-4A57-B3F6-CA4DF06E21A4</string>
-		</dict>
-		<key>B97EEBC7-670C-484F-A0F2-43F36A1A205D</key>
+		<key>1A8CAAC6-BD7B-4166-B47E-70188F031686</key>
 		<dict>
 			<key>from</key>
 			<string>D72A41DD-9E52-4FC5-B4B3-EC4DCD69C551 - D72A41DD-9E52-4FC5-B4B3-EC4DCD69C551</string>
 			<key>to</key>
 			<string>86989F72-0B47-4E16-8B28-15F0FBA1703B - 86989F72-0B47-4E16-8B28-15F0FBA1703B</string>
 		</dict>
-		<key>E2EC3371-7678-4618-BFD5-004A19D9B0DA</key>
+		<key>5550ECE4-5AA1-4F26-9B7C-FF60522637B3</key>
+		<dict>
+			<key>from</key>
+			<string>86989F72-0B47-4E16-8B28-15F0FBA1703B - 86989F72-0B47-4E16-8B28-15F0FBA1703B</string>
+			<key>to</key>
+			<string>2917E497-DA2E-4A57-B3F6-CA4DF06E21A4 - 2917E497-DA2E-4A57-B3F6-CA4DF06E21A4</string>
+		</dict>
+		<key>94B4447D-C2F1-4BFD-8699-E7AA94FF5C8D</key>
 		<dict>
 			<key>from</key>
 			<string>2917E497-DA2E-4A57-B3F6-CA4DF06E21A4 - 2917E497-DA2E-4A57-B3F6-CA4DF06E21A4</string>
